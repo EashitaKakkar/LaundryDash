@@ -21,11 +21,12 @@ export default function CreateOrder() {
   const [customerName, setCustomerName] = useState("");
   const [phone, setPhone] = useState("");
   const [loading, setLoading] = useState(false);
-
-  // --- 1. ADDED DELIVERY DATE STATE ---
-  const [deliveryDate, setDeliveryDate] = useState(
-    new Date(Date.now() + 2 * 24 * 60 * 60 * 1000).toISOString().split('T')[0]
-  );
+  const [deliveryDate, setDeliveryDate] = useState(() => {
+  const now = new Date();
+  // Defaulting to 2 days from now
+  now.setDate(now.getDate() + 2); 
+  return now.toISOString().split('T')[0]; 
+});
 
   const increase = (item) => {
     setQuantities((prev) => ({
