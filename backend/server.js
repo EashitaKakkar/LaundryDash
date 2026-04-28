@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
@@ -23,10 +24,12 @@ app.use("/api/orders", authMiddleware, orderRoutes);
 app.get("/", (req, res) => res.send("Laundry API is Live"));
 
 // 5. Database Connection
-mongoose.connect("mongodb://127.0.0.1:27017/laundryDB")
+const MONGO_URI = process.env.MONGO_URI || "mongodb://127.0.0.1:27017/laundryDB";
+
+mongoose.connect(MONGO_URI)
   .then(() => {
     console.log("✅ Connected to MongoDB");
-    // Only start listening AFTER DB is connected
-    app.listen(5000, () => console.log(" Server running on port 5000"));
+    const PORT = process.env.PORT || 5000; // Use Render's port or 5000
+    app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
   })
   .catch(err => console.error("❌ MongoDB Error:", err));

@@ -64,20 +64,15 @@ export default function CreateOrder() {
       const token = localStorage.getItem("token");
 
       // --- 3. UPDATED AXIOS POST TO SEND DELIVERY DATE ---
-      await axios.post(
-        "http://localhost:5000/api/orders/",
-        {
-          customerName,
-          phone,
-          garments,
-          estimatedDelivery: deliveryDate, // Sending the date here
-        },
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      );
+      await axios.post(`${import.meta.env.VITE_API_URL}/api/orders/`,
+         {
+           customerName,
+           phone,
+           garments,
+           estimatedDelivery: deliveryDate,
+          }, {
+            headers: { Authorization: `Bearer ${token}` }
+          });
 
       alert("Order Created!");
 
