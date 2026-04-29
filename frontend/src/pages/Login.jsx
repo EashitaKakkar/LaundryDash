@@ -11,12 +11,12 @@ export default function Login() {
     e.preventDefault();
 
     try {
-      const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000"; 
+      // const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000"; 
+      // Hardcode the Render URL directly for now to bypass the env variable issue
       const res = await axios.post(
-        `${API_URL}/api/auth/login`, 
+        'https://laundrydash.onrender.com/api/auth/login', 
         { email, password }
       );
-
       
       localStorage.setItem('token', res.data.token);
       window.location.href = '/dashboard'
