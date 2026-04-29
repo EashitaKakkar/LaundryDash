@@ -92,7 +92,7 @@ This project was built leveraging AI tools (ChatGPT/Gemini) to optimize speed an
 ##  API Documentation (Postman)
 The API endpoints were designed and validated using Postman. You can access the public workspace and collection to test the live API here:
 
-[🔗 View Public Postman Collection]([https://eashitakakkar-1722905.postman.co/workspace/Eashita-Kakkar's-Workspace~f9764da9-209a-4365-89f8-c1f3e64dcfe1/collection/54354095-95e41df5-8257-45ff-9315-7e310edc7393](https://eashitakakkar-1722905.postman.co/workspace/Eashita-Kakkar's-Workspace~f9764da9-209a-4365-89f8-c1f3e64dcfe1/collection/54354095-95e41df5-8257-45ff-9315-7e310edc7393?action=share&creator=54354095))
+[ View Public Postman Collection](https://eashitakakkar-1722905.postman.co/workspace/Eashita-Kakkar's-Workspace~f9764da9-209a-4365-89f8-c1f3e64dcfe1/collection/54354095-95e41df5-8257-45ff-9315-7e310edc7393?action=share&creator=54354095)
 
 ##  Setup Instructions
 
