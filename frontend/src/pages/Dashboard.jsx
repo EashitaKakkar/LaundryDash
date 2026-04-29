@@ -13,40 +13,45 @@ const Dashboard = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [statusFilter, setStatusFilter] = useState("ALL");
 
-  const fetchDashboardData = async () => {
-    try {
-      const token = localStorage.getItem("token");
-      const res = await axios.get("http://localhost:5000/api/orders/dashboard", {
-        headers: { Authorization: `Bearer ${token}` },
-      });
-      setData(res.data);
-    } catch (err) {
-      console.error("Error fetching dashboard data", err);
-    } finally {
-      setLoading(false);
-    }
-  };
+ const fetchDashboardData = async () => {
+  try {
+    const token = localStorage.getItem("token");
+    // HARDCODED RENDER URL
+    const res = await axios.get("https://laundrydash.onrender.com/api/orders/dashboard", {
+      headers: { Authorization: `Bearer ${token}` },
+    });
+    setData(res.data);
+  } catch (err) {
+    console.error("Error fetching dashboard data", err);
+  } finally {
+    setLoading(false);
+  }
+};
 
   useEffect(() => {
-    fetchDashboardData();
-  }, []);
+    const loadDashboard = async () => {
+      await fetchDashboardData();
+    };
+    
+    loadDashboard();
+  }, []); // Empty array ensures this only runs ONCE when the component loads
 
   // --- NEW FUNCTION TO UPDATE STATUS ---
   const handleUpdateStatus = async (id, newStatus) => {
-    try {
-      const token = localStorage.getItem("token");
-      await axios.patch(
-        `http://localhost:5000/api/orders/${id}/status`,
-        { status: newStatus },
-        { headers: { Authorization: `Bearer ${token}` } }
-      );
-      // Refresh the list to reflect changes
-      fetchDashboardData();
-    } catch (err) {
-      console.error("Error updating status", err);
-      alert("Failed to update status");
-    }
-  };
+  try {
+    const token = localStorage.getItem("token");
+    // HARDCODED RENDER URL
+    await axios.patch(
+      `https://laundrydash.onrender.com/api/orders/${id}/status`,
+      { status: newStatus },
+      { headers: { Authorization: `Bearer ${token}` } }
+    );
+    fetchDashboardData();
+  } catch (err) {
+    console.error("Error updating status", err);
+    alert("Failed to update status");
+  }
+};
 
   // --- FILTERING LOGIC ---
   const filteredOrders = (data.orders || []).filter((order) => {
