@@ -29,13 +29,15 @@ const Dashboard = () => {
 };
 
   useEffect(() => {
-    const loadDashboard = async () => {
+  const loadDashboard = async () => {
+    try {
       await fetchDashboardData();
-    };
-    
-    loadDashboard();
-  }, []); 
-
+    } catch (error) {
+      console.error("Initial load failed", error);
+    }
+  };
+  loadDashboard();
+}, []);
   // --- NEW FUNCTION TO UPDATE STATUS ---
   const handleUpdateStatus = async (id, newStatus) => {
   try {
