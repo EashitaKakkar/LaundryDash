@@ -5,6 +5,10 @@
 - **Frontend:** [Live on Vercel](https://laundry-dash-vphw.vercel.app)
 - **Backend:** [Live on Render](https://laundrydash.onrender.com)
 
+##  Project Demo Video
+A video demonstration of the application's core features, including order creation, dashboard analytics, and status updates:
+
+[Watch the Demo Video](./assets/Screen Recording 2026-04-29 150903)
 
 ##  Tech Stack
 
