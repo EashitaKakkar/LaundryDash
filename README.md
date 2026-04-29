@@ -8,7 +8,7 @@
 ##  Project Demo Video
 A video demonstration of the application's core features, including order creation, dashboard analytics, and status updates:
 
-[Watch the Demo Video](./assets/Screen Recording 2026-04-29 150903)
+[Watch the Demo Video](./assets/Screen Recording 2026-04-29 150903.mp4)
 
 ##  Tech Stack
 
