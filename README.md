@@ -105,7 +105,7 @@ This project was built leveraging AI tools (ChatGPT/Gemini) to optimize speed an
 - **Tradeoff:** Skipped a public Signup frontend to focus on the core admin Dashboard; users are provisioned via database/Postman.
 - **Tradeoff:** Hardcoded production URLs for the demo to ensure zero-config functionality for evaluators.
 - **Future Improvements:** Implementation of Refresh Tokens, SMS/WhatsApp status notifications, and garment condition image uploads.
-- **Future Implementats:** Implementation of automated real time updates based on deliveries.
+- **Future Improvements:** Implementation of automated real time updates based on deliveries.
 - **Future Implementats:** Implementation of user signin and online application for dry cleaning requests, which could be integrated in the owner's DB.
 
 ---
