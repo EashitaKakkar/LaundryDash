@@ -12,7 +12,6 @@ export default function Login() {
 
     try {
       const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000"; 
-      // 2. Use backticks `` and ${} to inject the URL
       const res = await axios.post(
         `${API_URL}/api/auth/login`, 
         { email, password }
