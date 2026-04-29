@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import CreateOrder from './components/CreateOrder';
-import Navbar from './components/Navbar';
+import Navbar from './components/navbar';
 
 function App() {
   const isAuthenticated = !!localStorage.getItem('token');
