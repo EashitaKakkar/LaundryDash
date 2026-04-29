@@ -5,6 +5,12 @@
 - **Frontend:** [Live on Vercel](https://laundry-dash-vphw.vercel.app)
 - **Backend:** [Live on Render](https://laundrydash.onrender.com)
 
+
+##  Tech Stack
+
+- **Frontend:** Built with **React** and **Tailwind CSS v4** using **Vite** for a lightning-fast development experience and optimized production bundling.
+- **Backend:** Powered by **Node.js** and **Express.js**, featuring **JWT** authentication and **Bcrypt** hashing to secure protected API routes.
+- **Database:** Utilizes **MongoDB Atlas** with **Mongoose** to handle complex data modeling and efficient aggregation for real-time dashboard analytics.
 ---
 
 ##  Features Implemented
