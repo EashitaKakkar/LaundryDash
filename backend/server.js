@@ -11,10 +11,7 @@ const app = express();
 
 // 1. Middlewares (Must be BEFORE routes)
 app.use(express.json());
-app.use(cors({
-  origin: "https://laundry-dash-vphw.vercel.app", 
-  credentials: true
-}));
+app.use(cors());
 
 // 2. Public Routes
 app.use("/api/auth", authRoutes);

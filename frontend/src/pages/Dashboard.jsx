@@ -34,7 +34,7 @@ const Dashboard = () => {
     };
     
     loadDashboard();
-  }, []); // Empty array ensures this only runs ONCE when the component loads
+  }, []); 
 
   // --- NEW FUNCTION TO UPDATE STATUS ---
   const handleUpdateStatus = async (id, newStatus) => {
